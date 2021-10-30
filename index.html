@@ -45,11 +45,15 @@
             <div class="flex01">
                 <div class="form_ctnr">
                     <h1>Fique ligado!</h1>
-                    <h2>Deixe seu e-mail para assistir o primeiro episódio, logo que sair!</h2>
+                    <h2>Preencha abaixo para assistir o primeiro episódio, logo que sair!</h2>
 
                     <form id="form" name="email_form" method="POST" data-netlify="true">
                         <p>
-                            <input placeholder="seu e-mail aqui" type="email" name="email_input">
+                            <input required placeholder="e-mail" type="email" name="email_input">
+                        </p>
+                        <span class="fields_or">e/ou...</span>
+                        <p>
+                            <input required placeholder="telefone" type="tel" name="tel_input">
                         </p>
                         
                         <p>
