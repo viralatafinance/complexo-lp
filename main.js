@@ -12,7 +12,7 @@ document.onreadystatechange = function () {
 
 
 
-// let inputs = document.querySelectorAll('input');
+let inputs = document.querySelectorAll('input');
 
 // for(i=0;i<inputs.length;i++) {
 //     inputs[0].addEventListener('click', function() {
