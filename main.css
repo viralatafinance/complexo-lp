@@ -199,14 +199,17 @@ header {
     font-size: clamp(1.5rem, 7vw, 2.5rem);
     margin: 0 3rem 1rem 3rem;
     letter-spacing: 1px;
+    font-weight: 300;
 } .bullets h3 a {
     text-decoration: underline;
     color: var(--c4);
+    font-weight: 600;
 } .bullets article > a {
     font-size: clamp(1rem, 4vw, 1.2rem);
     color: var(--c4);
     text-decoration: underline;
     letter-spacing: 1px;
+    font-weight: 600;
 }
 
 .logo_final {
@@ -304,7 +307,7 @@ header {
         max-width: 75rem;
         margin: 2rem auto 6rem auto;
         justify-content: space-evenly;
-        padding: 0 10.5vw;
+        padding: 0 clamp(1rem, calc(20vw - 7rem), 7rem);
     } .bullets article {
         width: 30%;
     } .bullets h3 {
