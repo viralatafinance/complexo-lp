@@ -1,4 +1,19 @@
 
+#loading {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(assets/BG01.jpg);
+    background-color: #070707;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    z-index: 999;
+    transition: opacity 1.5s ease, visibility 1.5s ease;
+}
+
 
 @font-face {
     font-family: Avant Garde;
@@ -58,23 +73,21 @@ img {
 
 header {
     display: flex;
-    height: clamp(2.5rem, 15vw, 4rem);
-    padding: 4rem 10vw 3rem 10vw;
+    flex-direction: column;
     position: relative;
     background: var(--c1);
     z-index: 2;
+    padding: 2rem 0 0 0;
 } .logo {
     height: clamp(2.5rem, 16vw, 4.2rem);
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    position: relative;
+    margin: 0 0 3rem 0;
 }
 
 .desktop_intro {
     margin: 0 auto;
     display: block;
-    padding: 0 10vw;
+    padding: 0 6.2vw;
     box-sizing: border-box;
     position: relative;
     z-index: 1;
@@ -82,9 +95,9 @@ header {
 }
 
 .chamada {
-    width: clamp(13rem, 60vw, 20rem);
+    width: clamp(14rem, 65vw, 20rem);
     display: block;
-    margin: 1rem auto 2rem auto;
+    margin: 0 auto 3rem auto;
 }
 
 
@@ -94,9 +107,7 @@ header {
 }
 
 
-.form_ctnr {
-
-} .flex01 {
+.flex01 {
     display: flex;
     flex-direction: column;
 } .content {
@@ -125,43 +136,48 @@ header {
     font-size: clamp(1rem, 1.2vw, 1.2rem);
     text-align: center;
     color: var(--c2);
-    transition: box-shadow 1s 0.1s ease;
+    transition: box-shadow 0.2s ease;
 } input:focus {
-    outline:none;
-    box-shadow: 0 0 5rem -0.3rem var(--c4);
+    outline: none;
+    box-shadow: 0 0 10rem 1.5rem var(--c4);
 } input::placeholder {
     color: var(--c5);
-    font-size: clamp(0.9rem, 4vw, 1.2rem);
+    font-size: clamp(0.9rem, 4vw, 1rem);
     font-weight: 800;
     letter-spacing: 0.5px;
 } button {
     border: none;
-    padding: 0.4rem 1.4rem;
-    font-size: clamp(1rem, 4vw, 1.2rem);
+    font-size: clamp(1rem, 4.5vw, 1.2rem);
     letter-spacing: 0.5px;
     background: linear-gradient(-90deg, var(--c4),var(--c3));
     border-radius: 0.2rem;
     width: 40%;
     font-weight: 900;
-    width: clamp(9rem, 40vw, 13rem);
+    width: clamp(9rem, 45vw, 13rem);
+    cursor: pointer;
+    height: clamp(2.2rem, 10vw, 2.5rem);
 }
 
 .intro_img.desktop_hidden {
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
 }
 
 .social_menu {
     display: flex;
     flex-direction: row;
-    position:absolute;
-    top: 0.6rem;
-    left: 0.6rem;
+    justify-content: center;
+    margin: 0 0 1rem 0;
+} .social_menu a:hover {
+    transition: transform 0.05s ease;
+    transform:scale(1.1);
 } .social_menu a {
-    width: clamp(1.1rem, 4vw, 1.4rem);
-    height: clamp(1.1rem, 4vw, 1.4rem);
+    width: clamp(1.1rem, 7vw, 1.4rem);
+    height: clamp(1.1rem, 4vw, 1.3rem);
     display: block;
-    margin-right: clamp(1.1rem, 4vw, 1.4rem);
+    margin: 0 0.6rem;
+    transition: transform 0.8s ease;
 } .social_menu img {
+    object-fit: contain;
     width: 100%;
     height:100%;
 }
@@ -175,13 +191,13 @@ header {
     justify-content: center;
     text-transform: uppercase;
     font-weight: 900;
-    margin: 4rem 0;
+    margin: 6rem 0 0 0;
 } .bullets article {
     margin-bottom: 3rem;
     max-width: 32rem;
 } .bullets h3 {
     font-size: clamp(1.5rem, 7vw, 2.5rem);
-    margin: 0 2rem 1rem 2rem;
+    margin: 0 3rem 1rem 3rem;
     letter-spacing: 1px;
 } .bullets h3 a {
     text-decoration: underline;
@@ -195,14 +211,17 @@ header {
 
 .logo_final {
     display: block;
-    margin: 10vw auto 10vw auto;
-    width: clamp(15rem, 70vw, 38rem);
+    margin: 10vw auto calc(3rem + 4vw) auto;
+    width: clamp(17rem, 50vw, 38rem);
 }
 
-
+.bottom_menu {
+    display: inline-flex;
+    position:relative;
+}
 
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
   }
   
   /* Track */
@@ -212,12 +231,7 @@ header {
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #ffffff;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #00eeef;
+    background: #cad883;
   }
 
 
@@ -255,8 +269,7 @@ header {
 
 
 
-
-@media (min-width:100vh) and (min-width:1000px) {
+@media (orientation: landscape) and (min-width:900px) {
 
     .desktop_hidden {
         display:none;
@@ -264,10 +277,17 @@ header {
         display:initial;
     }
 
-    .social_menu {
-        position: static;
+    header {
+        flex-direction: row;
+        padding: 3rem 6.2vw 4rem 6.2vw;
+        height: clamp(2.5rem, 15vw, 4rem);
+    } .logo {
+        height: clamp(2.5rem, 16vw, 4.2rem);
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
     }
-
 
     .content {
         transform: translateY(-55vw);
@@ -282,16 +302,18 @@ header {
         flex-flow: row;
         text-align: left;
         max-width: 75rem;
-        margin: 3rem auto;
+        margin: 2rem auto 6rem auto;
         justify-content: space-evenly;
         padding: 0 10.5vw;
     } .bullets article {
-
+        width: 30%;
     } .bullets h3 {
         margin: 0 0 1rem 0;
         font-size: clamp(1rem, 2vw, 2rem);
     }
 
 
-
+    .social_menu:first-of-type a {
+        margin: 0 1.2rem 0 0;
+    }
 }
