@@ -130,21 +130,18 @@ header {
     margin: 1rem auto 1rem auto;
     line-height: 2.5rem;
     padding: 0 1rem;
-    background: var(--c1);
-    border: 2px solid var(--c4);
+    border: 2px solid #EEE;
     border-radius: 0.2rem;
     font-size: clamp(1rem, 1.2vw, 1.2rem);
     text-align: center;
     color: var(--c2);
-    transition: box-shadow 0.2s ease;
 } input:focus {
     outline: none;
-    box-shadow: 0 0 10rem 1.5rem var(--c4);
 } input::placeholder {
-    color: var(--c5);
+    color: #CCC;
     font-size: clamp(0.9rem, 4vw, 1rem);
-    font-weight: 800;
-    letter-spacing: 0.5px;
+    font-weight: 400;
+    letter-spacing: 1px;
 } button {
     border: none;
     font-size: clamp(1rem, 4.5vw, 1.2rem);
@@ -221,6 +218,14 @@ header {
 .bottom_menu {
     display: inline-flex;
     position:relative;
+}
+
+
+.form_ctnr {
+    background: var(--c2);
+    color: black !important;
+    text-align: center;
+    padding: 6rem 0;
 }
 
 ::-webkit-scrollbar {
