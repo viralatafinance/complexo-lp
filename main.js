@@ -16,13 +16,9 @@ let inputs = document.querySelectorAll('input');
 
 for(i=0;i<inputs.length;i++) {
     inputs[0].addEventListener('click', function() {
-        inputs[0].setAttribute('required', true)
-        inputs[1].getAttribute('required')
         inputs[1].removeAttribute('required')
     })
     inputs[1].addEventListener('click', function() {
-        inputs[1].setAttribute('required', true)
-        inputs[0].getAttribute('required')
         inputs[0].removeAttribute('required')
     })
 }
