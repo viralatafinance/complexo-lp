@@ -89,6 +89,7 @@ header {
     position: relative;
     z-index: 1;
     box-shadow: 0 0 12rem 15rem #000306;
+    will-change: transform;
 }
 
 .chamada {
